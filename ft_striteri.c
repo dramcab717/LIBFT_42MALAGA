@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 13:15:43 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/05 17:32:02 by epedrosa         ###   ########.fr       */
+/*   Created: 2024/10/23 13:14:04 by epedrosa          #+#    #+#             */
+/*   Updated: 2024/10/23 13:14:15 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
-{
-	int	ans;
+#include "libft.h"
 
-	ans = 0;
-	if (c >= 32 && c <= 126)
-		ans = 1;
-	return (ans);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

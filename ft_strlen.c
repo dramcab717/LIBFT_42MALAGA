@@ -6,18 +6,18 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 13:15:32 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/09/11 13:47:01 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/10/06 14:25:15 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen(const char *s)
-{
-    size_t i;
+#include "libft.h"
 
-    i = 0;
-    while(s[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

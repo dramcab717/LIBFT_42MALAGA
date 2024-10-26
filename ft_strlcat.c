@@ -1,35 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 16:44:13 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/06 15:06:11 by epedrosa         ###   ########.fr       */
+/*   Created: 2024/09/24 19:27:14 by epedrosa          #+#    #+#             */
+/*   Updated: 2024/10/11 09:46:47 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			i;
-	unsigned char	*strs;
+	size_t	s;
+	size_t	d;
 
-	strs = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	d = ft_strlen(dst);
+	s = 0;
+	if (size <= d)
+		return (size + ft_strlen(src));
+	while (d + s < size - 1 && src[s])
 	{
-		strs[i] = 0;
-		i++;
+		dst[d + s] = src[s];
+		s++;
 	}
+	dst[d + s] = '\0';
+	return (ft_strlen(src) + d);
 }
 /*
 int	main(void) {
-	char buffer[10];
-	ft_bzero(buffer, 10);
-	// Ahora, buffer contiene 10 bytes, todos establecidos a '\0'
+	char dest[12] = "Hello, ";
+	char src[] = "World!";
+	size_t size =15;
+
+	size_t result = ft_strlcat(dest, src, sizeof(dest));
+	printf("Destination: %s\n", dest);
+	printf("Result: %zu\n", result);
+
 	return (0);
 }
 */

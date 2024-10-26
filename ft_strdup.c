@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 13:15:43 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/05 17:32:02 by epedrosa         ###   ########.fr       */
+/*   Created: 2024/10/05 13:57:40 by epedrosa          #+#    #+#             */
+/*   Updated: 2024/10/10 18:16:29 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
-{
-	int	ans;
+#include "libft.h"
 
-	ans = 0;
-	if (c >= 32 && c <= 126)
-		ans = 1;
-	return (ans);
+char	*ft_strdup(const char *s)
+{
+	char	*ptr;
+
+	ptr = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (ptr == NULL)
+		return (NULL);
+	ft_memcpy(ptr, s, (ft_strlen(s) + 1));
+	return (ptr);
 }

@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 13:15:43 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/05 17:32:02 by epedrosa         ###   ########.fr       */
+/*   Created: 2024/10/23 13:22:50 by epedrosa          #+#    #+#             */
+/*   Updated: 2024/10/25 16:05:10 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
-{
-	int	ans;
+#include "libft.h"
 
-	ans = 0;
-	if (c >= 32 && c <= 126)
-		ans = 1;
-	return (ans);
+t_list	*ft_lstnew_bonus(void *content)
+{
+	t_list	*next;
+	t_list	*node;
+
+	next = NULL;
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = next;
+	return (node);
 }

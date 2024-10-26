@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 13:15:43 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/05 17:32:02 by epedrosa         ###   ########.fr       */
+/*   Created: 2024/10/23 13:12:41 by epedrosa          #+#    #+#             */
+/*   Updated: 2024/10/23 13:13:36 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
-{
-	int	ans;
+#include "libft.h"
 
-	ans = 0;
-	if (c >= 32 && c <= 126)
-		ans = 1;
-	return (ans);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	i;
+	char			*ptr;
+
+	if (!s || !f)
+		return (NULL);
+	ptr = (char *)malloc(ft_strlen(s) + 1);
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		ptr[i] = f(i, s[i]);
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }

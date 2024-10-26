@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 13:15:43 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/05 17:32:02 by epedrosa         ###   ########.fr       */
+/*   Created: 2024/10/16 17:39:46 by epedrosa          #+#    #+#             */
+/*   Updated: 2024/10/16 17:51:31 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
-{
-	int	ans;
+#include "libft.h"
 
-	ans = 0;
-	if (c >= 32 && c <= 126)
-		ans = 1;
-	return (ans);
+char	**ft_split(char const *s, char c)
+{
+	
 }

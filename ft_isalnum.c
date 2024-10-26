@@ -6,18 +6,16 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 13:16:08 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/09/11 13:16:10 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:32:18 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    int ans;
+	int	ans;
 
-    ans = 0;
-    if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57))
-    {
-        ans = 1;
-    }
-    return(ans);
+	ans = 0;
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90) || (c >= 48 && c <= 57))
+		ans = 1;
+	return (ans);
 }

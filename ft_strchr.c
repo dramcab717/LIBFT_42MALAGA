@@ -6,22 +6,20 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 13:15:38 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/09/19 17:57:44 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/10/11 12:26:30 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
-{
-    int i;
+#include "libft.h"
 
-    i = 0;
-    while ((s[i] != '\0') && (s[i] != c))
-    {
-        i++;
-    }
-    if (s[i] == c)
-    {
-        return((char *)&s[i]);
-    }
-    return(NULL);
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
+	while ((s[i]) && (s[i] != (unsigned char)c))
+		i++;
+	if (s[i] == (unsigned char)c)
+		return ((char *)&s[i]);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 17:03:38 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/09/13 20:58:17 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:31:03 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memset(void *s, int c, size_t n)
 /*
 #include <stdio.h>
 
-int main() {
+int	main(void) {
 	// Define un buffer de 50 bytes
 	char buffer[20];
 
@@ -42,6 +42,6 @@ int main() {
 		printf("%c ", buffer[i]);
 	}
 
-	return 0;
+	return (0);
 }
 */

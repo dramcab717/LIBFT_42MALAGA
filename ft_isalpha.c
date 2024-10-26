@@ -6,18 +6,16 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 13:16:03 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/09/11 13:16:05 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:32:15 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    int ans;
+	int	ans;
 
-    ans = 0;
-    if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-    {
-        ans = 1;
-    }
-    return(ans);
+	ans = 0;
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+		ans = 1;
+	return (ans);
 }
