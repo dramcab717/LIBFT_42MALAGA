@@ -43,8 +43,11 @@ BONUS_SRC = \
 	ft_lstadd_front_bonus.c \
 	ft_lstsize_bonus.c \
 	ft_lstlast_bonus.c \
-	ft_lstadd_back_bonus \
-	ft_lstdelone_bonus 
+	ft_lstadd_back_bonus.c \
+	ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c \
+	ft_lstiter_bonus.c \
+	ft_lstmap.c
 
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
@@ -52,11 +55,12 @@ BONUS_OBJ = $(BONUS_SRC:.c=.o)
 all: $(NAME)
 
 bonus: $(BONUS_OBJ)
-	@ar rcs $(NAME) $(BONUS_OBJ) && echo "compilado con bonus"
+	@ar rcs $(NAME) $(BONUS_OBJ)
+	@echo "\n( ͡° ͜ʖ ͡°) 👍 -ALL RIGHT MY BOY!\n"
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@echo "YA PUEDES DEJAR DE CRUZAR LOS DEDOS."
+	@echo "\n( ͡° ͜ʖ ͡°) 👍 -ALL RIGHT WHITOUT BONUS MY BOY!\n"
 
 $(OBJ): $(SRC)
 	$(CC) -c $(CFLAGS) $(SRC)

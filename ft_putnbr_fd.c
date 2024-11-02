@@ -16,10 +16,15 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	*str;
 
-	str = ft_itoa(n);
-	if (str)
+	if (n == -2147483647)
+		write(fd, "-2147483647", 12);
+	else
 	{
-		write(fd, str, ft_strlen(str));
-		free (str);
+		str = ft_itoa(n);
+		if (str)
+		{
+			write(fd, str, ft_strlen(str));
+			free (str);
+		}
 	}
 }
