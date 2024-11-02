@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 17:03:43 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/26 18:59:21 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/02 18:33:06 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 	{
-		ptr = malloc(1);
+		ptr = malloc(0);
 		if (ptr == NULL)
 			return (NULL);
 		return (ptr);

@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+
+	+:+     */
+/*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+
+	+#+        */
+/*                                                +#+#+#+#+#+
+	+#+           */
 /*   Created: 2024/10/13 17:51:44 by epedrosa          #+#    #+#             */
 /*   Updated: 2024/10/13 17:51:44 by epedrosa         ###   ########.fr       */
 /*                                                                            */
@@ -14,12 +17,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
+	long	nl;
+	char	c;
 
-	str = ft_itoa(n);
-	if (str)
+	nl = n;
+	if (nl < 0)
 	{
-		write(fd, str, ft_strlen(str));
-		free (str);
+		write(fd, "-", 1);
+		nl = -nl;
 	}
+	if (nl >= 10)
+		ft_putnbr_fd(nl / 10, fd);
+	c = (nl % 10) + '0';
+	write(fd, &c, 1);
 }

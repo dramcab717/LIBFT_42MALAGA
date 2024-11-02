@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:51:08 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/11/02 17:45:43 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/02 18:29:15 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_numlen(int n, int len)
 		n = n / 10;
 		len++;
 	}
-
 	return (len);
 }
 
