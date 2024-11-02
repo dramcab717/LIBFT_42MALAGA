@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:45:45 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/26 16:33:04 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:44:24 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst -> next)
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }

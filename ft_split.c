@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 14:14:16 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/11/02 14:14:23 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:22:35 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	size_t	len;
-	size_t	count;
+	size_t	i;
 
 	ptr = malloc(sizeof(char *) * (ft_counter(s, c) + 1));
 	if (!ptr)
@@ -52,6 +52,6 @@ char	**ft_split(char const *s, char c)
 		else
 			++s;
 	}
-	ptr[i] = '\0';
+	ptr[i] = 0;
 	return (ptr);
 }

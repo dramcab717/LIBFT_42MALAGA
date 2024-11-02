@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 14:16:19 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/09/24 18:36:46 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:20:39 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (!dest || !src)
-		return (dest);
-	if (n == 0)
-		return (dest);
 	if (s < d && s + n > d)
 	{
 		while (n--)

@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:51:41 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/10/26 16:32:48 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/02 16:29:57 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*temp;
+	t_list	*last;
 
 	if (*lst == NULL)
 		*lst = new;
 	else
 	{
-		temp = *lst;
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
+		last = ft_lstlast(*lst);
+		last->next = new;
 	}
-	new->next = NULL;
 }

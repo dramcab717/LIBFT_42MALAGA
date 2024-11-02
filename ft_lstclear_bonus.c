@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 14:14:59 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/11/02 14:15:34 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:25:31 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	while (*lst)
 	{
-		temp = *lst->next;
-		del(*lst->content);
+		temp = (*lst)->next;
+		del((*lst)->content);
 		free(*lst);
 		*lst = temp;
 	}
