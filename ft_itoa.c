@@ -6,7 +6,7 @@
 /*   By: epedrosa <epedrosa@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:51:08 by epedrosa          #+#    #+#             */
-/*   Updated: 2024/11/02 18:29:15 by epedrosa         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:09:28 by epedrosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_iszero(void)
 	char	*ptr;
 
 	ptr = (char *)malloc(2);
+	if (!ptr)
+		return (NULL);
 	ptr[0] = '0';
 	ptr[1] = '\0';
 	return (ptr);
